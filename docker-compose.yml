@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    image: postgres:16.1
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: nextauth
+      POSTGRES_PASSWORD: nextauth
+      POSTGRES_DB: nextauth
+    volumes:
+      - pg_data:/var/lib/postgresql/maysara
+
+volumes:
+  pg_data:
